@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from classifier.views import test_view
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/test/', test_view),
+    path('api/', include('classifier.urls')),
 ]
